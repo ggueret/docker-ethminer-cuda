@@ -1,4 +1,6 @@
 FROM nvidia/cuda:11.2.2-devel-ubuntu20.04
+ENV DEBIAN_FRONTEND noninteractive
+ENV LANG C
 
 RUN apt-get update && apt-get -y install git cmake g++ libdbus-1-dev && \
     git clone https://github.com/ethereum-mining/ethminer.git && \
